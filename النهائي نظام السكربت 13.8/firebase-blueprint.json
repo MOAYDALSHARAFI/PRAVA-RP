@@ -1,0 +1,108 @@
+{
+  "entities": {
+    "AppSettings": {
+      "title": "AppSettings",
+      "description": "Global server configuration shared across all users and devices",
+      "type": "object",
+      "properties": {
+        "serverName": {
+          "type": "string",
+          "description": "Official server name"
+        },
+        "serverSubtitle": {
+          "type": "string",
+          "description": "Ministry or organization subtitle"
+        },
+        "developerPin": {
+          "type": "string",
+          "description": "Secure developer PIN code"
+        },
+        "discordWebhook": {
+          "type": "string",
+          "description": "Discord webhook URL"
+        },
+        "discordChannelUrl": {
+          "type": "string",
+          "description": "Target Discord scenario channel URL"
+        },
+        "discordBotToken": {
+          "type": "string",
+          "description": "Discord Bot Token for voice sync"
+        },
+        "discordGuildId": {
+          "type": "string",
+          "description": "Discord server/guild snowflake ID"
+        },
+        "discordVoiceChannelId": {
+          "type": "string",
+          "description": "Discord voice channel snowflake ID"
+        },
+        "voiceRoomName": {
+          "type": "string",
+          "description": "Name of the voice channel"
+        },
+        "messageTemplate": {
+          "type": "string",
+          "description": "Default Markdown report template"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "ISO timestamp of last update"
+        }
+      }
+    },
+    "ScenarioReport": {
+      "title": "ScenarioReport",
+      "description": "Saved scenario report documentation record",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique report ID"
+        },
+        "sectorId": {
+          "type": "string",
+          "description": "Sector identifier (e.g. swat, public_security)"
+        },
+        "sectorName": {
+          "type": "string",
+          "description": "Arabic sector name"
+        },
+        "eventType": {
+          "type": "string",
+          "description": "Event type label"
+        },
+        "location": {
+          "type": "string",
+          "description": "Location description or grid"
+        },
+        "dateTime": {
+          "type": "string",
+          "description": "Recorded date and time string"
+        },
+        "officerInCharge": {
+          "type": "string",
+          "description": "Name of the commanding officer"
+        },
+        "attendanceCount": {
+          "type": "number",
+          "description": "Number of attending members"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "ISO timestamp of report creation"
+        }
+      }
+    }
+  },
+  "firestore": {
+    "/settings/{settingId}": {
+      "schema": "AppSettings",
+      "description": "Shared application settings document"
+    },
+    "/reports/{reportId}": {
+      "schema": "ScenarioReport",
+      "description": "Collection of all logged scenario reports"
+    }
+  }
+}

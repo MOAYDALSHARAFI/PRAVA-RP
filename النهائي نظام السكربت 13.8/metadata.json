@@ -1,0 +1,8 @@
+{
+  "name": "نظام توثيق السناريوهات - Prava RP",
+  "description": "نظام توثيق السناريوهات وتقارير الديسكورد الرسمية لسيرفر برافا (Prava RP) - مطابقة أفراد الرومات الصوتية وتوليد منشنات وتقارير جاهزة للنسخ",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

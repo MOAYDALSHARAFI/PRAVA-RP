@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d121c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #253347;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* Theme: White / Light Mode Overrides */
+.theme-white {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+.theme-white header {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+.theme-white .bg-\[\#0e1422\] {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+.theme-white .bg-slate-900\/60,
+.theme-white .bg-slate-900\/90,
+.theme-white .bg-slate-950,
+.theme-white .bg-slate-950\/80,
+.theme-white .bg-slate-950\/60,
+.theme-white .bg-slate-950\/40,
+.theme-white .bg-\[\#090d16\]\/80,
+.theme-white .bg-\[\#090d16\]\/70 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+.theme-white .text-white,
+.theme-white .text-slate-100,
+.theme-white .text-slate-200 {
+  color: #0f172a !important;
+}
+
+.theme-white .text-slate-300,
+.theme-white .text-slate-400 {
+  color: #475569 !important;
+}
+
+.theme-white input,
+.theme-white select,
+.theme-white textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Theme: Prava Gold Overrides */
+.theme-gold {
+  background-color: #060608 !important;
+  color: #fef3c7 !important;
+}
+
+.theme-gold header {
+  background-color: #0d0c0a !important;
+  border-color: rgba(217, 119, 6, 0.3) !important;
+}
+
+.theme-gold .bg-\[\#0e1422\] {
+  background-color: #0f0d0a !important;
+  border-color: rgba(217, 119, 6, 0.25) !important;
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.05);
+}
+
+.theme-gold .border-blue-500,
+.theme-gold .border-blue-600 {
+  border-color: #f59e0b !important;
+}
+
+.theme-gold .bg-blue-600 {
+  background-color: #d97706 !important;
+  color: #000000 !important;
+}
+
+.theme-gold .bg-blue-600:hover {
+  background-color: #f59e0b !important;
+}
+
+/* Tactical Laser Scanner Animations */
+@keyframes scanline {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.animate-scanline {
+  animation: scanline 1.8s ease-in-out infinite;
+}
+
